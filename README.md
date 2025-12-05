@@ -5,7 +5,7 @@ CropsTakeDurability is a simple Spigot/Paper plugin that makes hoes lose durabil
 ## Requirements
 
 - Java 16 or newer
-- Spigot or Paper 1.17+ (tested on Paper 1.21.10)
+- Spigot or Paper 1.17+
 
 ## Installation
 

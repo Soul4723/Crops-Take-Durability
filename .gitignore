@@ -1,5 +1,7 @@
 target/
 .idea/
+out/
 *.iml
 *.log
 *.tmp
+*.jar

@@ -1,6 +1,7 @@
 package io.github.soul4723.cropstakedurability;
 
 import org.bukkit.Material;
+import org.bukkit.Sound;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -9,7 +10,6 @@ import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.Damageable;
 import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.Sound;
 
 import java.util.EnumSet;
 import java.util.Random;
@@ -32,7 +32,6 @@ public class CropDurabilityListener implements Listener {
         }
 
         Material blockType = event.getBlock().getType();
-
         if (!cropMaterials.contains(blockType)) {
             return;
         }
@@ -40,16 +39,12 @@ public class CropDurabilityListener implements Listener {
         ItemStack mainHand = player.getInventory().getItemInMainHand();
         ItemStack offHand = player.getInventory().getItemInOffHand();
 
-        damageHoeIfApplicable(player, mainHand, true);
-        damageHoeIfApplicable(player, offHand, false);
+        damageItemIfApplicable(player, mainHand, true);
+        damageItemIfApplicable(player, offHand, false);
     }
 
-    private void damageHoeIfApplicable(Player player, ItemStack item, boolean isMainHand) {
+    private void damageItemIfApplicable(Player player, ItemStack item, boolean isMainHand) {
         if (item == null || item.getType().isAir()) {
-            return;
-        }
-
-        if (!item.getType().name().endsWith("_HOE")) {
             return;
         }
 
@@ -76,6 +71,7 @@ public class CropDurabilityListener implements Listener {
         } else {
             damageable.setDamage(currentDamage + 1);
             item.setItemMeta(meta);
+
             if (isMainHand) {
                 player.getInventory().setItemInMainHand(item);
             } else {

@@ -3,12 +3,12 @@ package io.github.soul4723.cropstakedurability;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
-import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.event.HandlerList;
+import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.EnumSet;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 public final class CropHoeDurabilityPlugin extends JavaPlugin {
@@ -43,7 +43,7 @@ public final class CropHoeDurabilityPlugin extends JavaPlugin {
                         return null;
                     }
                 })
-                .filter(java.util.Objects::nonNull)
+                .filter(Objects::nonNull)
                 .collect(Collectors.toCollection(() -> EnumSet.noneOf(Material.class)));
 
         if (cropMaterials.isEmpty()) {
