@@ -1,0 +1,21 @@
+name: CropsTakeDurability
+version: '1.0.0'
+main: io.github.soul4723.cropstakedurability.CropHoeDurabilityPlugin
+api-version: '1.17'
+description: Makes hoes lose durability when harvesting crops.
+authors: [Soul4723]
+website: https://github.com/Soul4723
+
+commands:
+  cropsdurability:
+    description: Reloads the CropsTakeDurability configuration.
+    usage: /cropsdurability reload
+    permission: cropstakedurability.reload
+
+permissions:
+  cropstakedurability.reload:
+    description: Allows reloading the CropsTakeDurability configuration.
+    default: op
+  cropstakedurability.bypass:
+    description: Prevents hoes from taking durability when harvesting configured crops.
+    default: false

@@ -1,0 +1,19 @@
+# A list of all materials that should cause a hoe to take durability damage when harvested.
+# You can add or remove any material from this list.
+# A full list of materials can be found here: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+crop-materials:
+  - 'WHEAT'
+  - 'CARROTS'
+  - 'POTATOES'
+  - 'BEETROOTS'
+  - 'NETHER_WART'
+  - 'SWEET_BERRY_BUSH'
+  - 'CAVE_VINES'
+  - 'CAVE_VINES_PLANT'
+  - 'BROWN_MUSHROOM'
+  - 'RED_MUSHROOM'
+  - 'COCOA'
+  - 'TORCHFLOWER'
+  - 'PITCHER_PLANT'
+  - 'CRIMSON_FUNGUS'
+  - 'WARPED_FUNGUS'
