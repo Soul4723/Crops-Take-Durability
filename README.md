@@ -1,6 +1,6 @@
 # CropsTakeDurability
 
-CropsTakeDurability is a simple Spigot/Paper plugin that makes hoes lose durability when harvesting certain crops. The list of affected crops is configurable.
+CropsTakeDurability is a simple Spigot/Paper plugin that makes tools lose durability when harvesting certain crops. The list of affected crops is configurable.
 
 ## Requirements
 
